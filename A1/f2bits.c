@@ -59,7 +59,7 @@ union float_32{
 } float_32;
 char bit_string[43];
 
-int i,j,k;
+int i;
 
 for(i=0; i<42; i++){
 	bit_string[i] = ' ';
@@ -111,11 +111,30 @@ bit_string[38] = float_32.bit.b1?'1':'0';
 bit_string[39] = float_32.bit.b0?'1':'0';
 
 
+int k;
+printf("\nThe floating value for %g is broken out as:\n", float_32.floating_value_in_32_bits);
+printf("\tmantissa:\t%-#8x\tor:            ", float_32.f_bits.mantissa);
+for (k = 11; k < 39; k++){
+	printf("%c", bit_string[k]);
+}
+printf("\n");
 
-printf("\n\nthe base 10 float result is:  %15g", float_32.floating_value_in_32_bits);
-printf("\n\nthe base 10 int   result is:  %15d\n\n", float_32.floating_value_as_int);
+printf("\texponent:\t%-#8x\tor:   ", float_32.f_bits.exponent);
+for (k = 2; k < 11; k++){
+	printf("%c", bit_string[k]);
+}
+printf("\n");
 
-printf("          components in hex are:   %08x\n\n", float_32.floating_value_as_int);
+printf("\t    sign:\t%-8x\tor: ", float_32.f_bits.sign);
+for (k = 0; k < 2; k++){
+	printf("%c", bit_string[k]);
+}
+printf("\n");
 
-printf("       components in binary are:   %s\n", bit_string);
+printf("      in base 10:\t%-7f\tor: ", float_32.floating_value_in_32_bits);
+for (k = 0; k < 39; k++){
+	printf("%c", bit_string[k]);
+}
+printf("\n");
+
 }
