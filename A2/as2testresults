@@ -1,0 +1,85 @@
+Please enter two positive floating point values each with:
+			
+	- no more than 6 significant digits
+    		
+	- a value between   +   10**37 and 10**-37
+
+Enter Float 1: Enter Float 2: 
+Original patter of Float 1: 0 1000 0100 000 1010 0000 0000 0000 0000  
+Original patter of Float 2: 0 0111 1111 010 0000 0000 0000 0000 0000  
+Bit patter of result      : 0 1000 0100 000 1111 0000 0000 0000 0000  
+
+HARDWARE FLOATING RESULT FROM PRINTF ==>>> 35.750000
+EMULATED FLOATING RESULT FROM PRINTF ==>>> 35.750000
+
+Please enter two positive floating point values each with:
+			
+	- no more than 6 significant digits
+    		
+	- a value between   +   10**37 and 10**-37
+
+Enter Float 1: Enter Float 2: 
+Original patter of Float 1: 0 1000 1010 010 1011 1110 0000 0000 0000  
+Original patter of Float 2: 0 1000 0111 000 0000 0000 0000 0000 0000  
+Bit patter of result      : 0 1000 1010 011 1011 1110 0000 0000 0000  
+
+HARDWARE FLOATING RESULT FROM PRINTF ==>>> 3006.000000
+EMULATED FLOATING RESULT FROM PRINTF ==>>> 3006.000000
+
+Please enter two positive floating point values each with:
+			
+	- no more than 6 significant digits
+    		
+	- a value between   +   10**37 and 10**-37
+
+Enter Float 1: Enter Float 2: 
+Original patter of Float 1: 0 0111 0101 011 0111 1000 0000 0011 0100  
+Original patter of Float 2: 0 1000 0010 101 0000 0000 0000 0000 0000  
+Bit patter of result      : 0 1000 0010 101 0000 0000 0101 1011 1100  
+
+HARDWARE FLOATING RESULT FROM PRINTF ==>>> 13.001400
+EMULATED FLOATING RESULT FROM PRINTF ==>>> 13.001400
+
+Please enter two positive floating point values each with:
+			
+	- no more than 6 significant digits
+    		
+	- a value between   +   10**37 and 10**-37
+
+Enter Float 1: Enter Float 2: 
+Original patter of Float 1: 0 1000 0001 110 1111 1011 0110 0100 0110  
+Original patter of Float 2: 0 1100 0011 100 1000 0011 1010 1111 1111  
+Bit patter of result      : 0 1100 0011 100 1000 0011 1010 1111 1111  
+
+HARDWARE FLOATING RESULT FROM PRINTF ==>>> 461699991414396420096.000000
+EMULATED FLOATING RESULT FROM PRINTF ==>>> 461699991414396420096.000000
+
+Please enter two positive floating point values each with:
+			
+	- no more than 6 significant digits
+    		
+	- a value between   +   10**37 and 10**-37
+
+Enter Float 1: Enter Float 2: 
+Original patter of Float 1: 0 1000 1100 001 0110 1010 1100 0000 0000  
+Original patter of Float 2: 0 0111 1000 100 1010 1010 1011 1000 1010  
+Bit patter of result      : 0 1000 1100 001 0110 1010 1100 0000 1100  
+
+HARDWARE FLOATING RESULT FROM PRINTF ==>>> 9643.012695
+EMULATED FLOATING RESULT FROM PRINTF ==>>> 9643.011719
+
+Please enter two positive floating point values each with:
+			
+	- no more than 6 significant digits
+    		
+	- a value between   +   10**37 and 10**-37
+
+Enter Float 1: Enter Float 2: 
+2 HIDDEN BITS, MUST INCREMENT EXPONENT
+
+Original patter of Float 1: 0 1111 1110 011 1100 0001 0100 0100 0000  
+Original patter of Float 2: 0 1111 1101 110 0001 1011 0001 1110 0110  
+Bit patter of result      : 0 1111 1111 001 0110 0111 0110 1001 1001  
+
+HARDWARE FLOATING RESULT FROM PRINTF ==>>> inf
+EMULATED FLOATING RESULT FROM PRINTF ==>>> inf
