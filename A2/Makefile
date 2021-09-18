@@ -1,10 +1,10 @@
 CC = gcc
 CFLAGS = -std=c18 -g -Og -Wall -Werror -O3 -c -o
 LFLAGS = -o
-OBJ = f2bits.o
+OBJ = main.o
 DEPS = 
 LIBS = 
-BIN = f2bits
+BIN = floatadder
 
 all: $(BIN) $(DEPS)
 

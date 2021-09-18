@@ -131,7 +131,7 @@ for (k = 0; k < 2; k++){
 }
 printf("\n");
 
-printf("      in base 10: %-F\t\tor: ", float_32.floating_value_in_32_bits);
+printf("      in base 10: %-8f\t\tor: ", float_32.floating_value_in_32_bits);
 for (k = 0; k < 39; k++){
 	printf("%c", bit_string[k]);
 }
