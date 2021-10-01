@@ -1,0 +1,13 @@
+ Assignment 3 completed by John Falvey (John_Falvey@student.uml.edu) on 2021-09-30
+
+I belive I have completed 100% of the assignment. I have not had any issues.
+
+how to get to work
+
+$ make run
+
+OR
+
+$ ./masm < rfib.asm > rfib.obj && ./mic1 prom.dat rfib.obj 0 2048
+
+results are at memory locations 105 to 109

@@ -1,0 +1,9 @@
+how to get to work
+
+$ make run
+
+OR
+
+$ ./masm < rfib.asm > rfib.obj && ./mic1 prom.dat rfib.obj 0 2048
+
+results are at memory locations 105 to 109
