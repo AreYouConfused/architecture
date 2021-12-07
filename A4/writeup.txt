@@ -1,0 +1,11 @@
+Assignment 4 completed by John Falvey <john_falvey@student.uml.edu> on 2021-11-05
+
+I have completed all of the required tasks and tested them, I think I have it working entirely,
+all the test files complete sucessfully
+
+how to run
+
+$ make run_div
+$ make run_mult
+$ make run_rshift
+
