@@ -1,77 +1,77 @@
-start:  lodd on:        
+start:  lodd on:
         stod 4095
-        call xbsywt:    
-        loco str1:      
-        call nextw:     
-        lodd on:        
+        call xbsywt:
+        loco str1:
+        call nextw:
+        lodd on:
         stod 4093
-bgndig: call rbsywt:    
-        lodd 4092       
-        subd numoff:    
-        push            
+bgndig: call rbsywt:
+        lodd 4092
+        subd numoff:
+        push
 nxtdig: call rbsywt:
-        lodd 4092       
-        stod nxtchr:    
+        lodd 4092
+        stod nxtchr:
         subd nl:
-        jzer endnum:    
-        mult 10         
-        lodd nxtchr:    
-        subd numoff:    
-        addl 0          
+        jzer endnum:
+        mult 10
+        lodd nxtchr:
+        subd numoff:
+        addl 0
         stol 0
         jump nxtdig:
-endnum: lodd numptr:    
-        popi            
-        addd c1:        
+endnum: lodd numptr:
+        popi
+        addd c1:
         stod numptr:
-        lodd numcnt:    
-        jzer addnu:    
+        lodd numcnt:
+        jzer addnu:
         subd c1:
         stod numcnt:
-        jump start:     
-addnu:  lodd binum1:    
+        jump start:
+addnu:  lodd binum1:
         addd binum2:
-        jneg oflow:    
-        stod sum:       
-        stod temp:      
+        jneg oflow:
+        stod sum:
+        stod temp:
 
-strgen: lodd c10:       
+strgen: lodd c10:
         push
         lodd temp:
         push
-        div             
+        div
         lodd lpcnt:
-        addd c1:        
+        addd c1:
         stod lpcnt:
-        lodl 1          
-        addd numoff:    
-        push            
-        lodd psum:      
-        popi            
-        addd c1:        
+        lodl 1
+        addd numoff:
+        push
+        lodd psum:
+        popi
+        addd c1:
         stod psum:
-        lodl 0          
-        jzer strgend:      
-        stod temp:      
+        lodl 0
+        jzer strgend:
+        stod temp:
         jump strgen:
 strgend:
-        call xbsywt:    
+        call xbsywt:
         loco str2:
         call nextw:
 
-prntnm: lodd lpcnt:     
+prntnm: lodd lpcnt:
         jzer done:
         subd c1:
         stod lpcnt:
         lodd psum:
-        subd c1:        
+        subd c1:
         stod psum:
-        pshi            
+        pshi
         call xbsywt:
-        pop             
-        stod 4094       
+        pop
+        stod 4094
         jump prntnm:
-done:   lodd cr:        
+done:   lodd cr:
         stod 4094
         call xbsywt:
         lodd nl:
@@ -79,64 +79,64 @@ done:   lodd cr:
         loco 0
         halt
 
-oflow:  call xbsywt:    
+oflow:  call xbsywt:
         loco str3:
         call nextw:
         lodd cn1:
         halt
 
-nextw:  pshi            
-        addd c1:        
+nextw:  pshi
+        addd c1:
         stod pstr:
-        lodl 0          
-        jzer crnl:      
-        stod 4094       
+        lodl 0
+        jzer crnl:
+        stod 4094
         subd c255:
-        jneg crnl:      
-        pop             
-        rshift 8        
-        push            
+        jneg crnl:
+        pop
+        rshift 8
+        push
         call xbsywt:
-        pop             
-        stod 4094       
+        pop
+        stod 4094
         call xbsywt:
-        lodd pstr:      
+        lodd pstr:
         jump nextw:
-xbsywt: lodd 4095       
-        subd mask:      
-        addd c1:        
+xbsywt: lodd 4095
+        subd mask:
+        addd c1:
         stod pstr:
-        lodl 0          
-        jzer crnl:      
-        stod 4094       
+        lodl 0
+        jzer crnl:
+        stod 4094
         subd c255:
-        jneg crnl:      
-        pop             
-        rshift 8        
-        push            
+        jneg crnl:
+        pop
+        rshift 8
+        push
         call xbsywt:
-        pop             
-        stod 4094       
+        pop
+        stod 4094
         call xbsywt:
-        lodd pstr:      
+        lodd pstr:
         jump nextw:
 crnl:   insp 1
         lodd cr:
-        stod 4094       
+        stod 4094
         call xbsywt:
         lodd nl:
-        stod 4094       
+        stod 4094
         call xbsywt:
         retn
-xbsywt: lodd 4095       
-        subd mask:      
+xbsywt: lodd 4095
+        subd mask:
         jneg xbsywt:
-        retn   
-rbsywt: lodd 4093       
-        subd mask:      
+        retn
+rbsywt: lodd 4093
+        subd mask:
         jneg rbsywt:
         retn
-on:     8               
+on:     8
 mask:   10
 nl:     10
 cr:     13
@@ -151,21 +151,21 @@ numptr: binum1:
 binum1: 0
 binum2: 0
 numcnt: 1
-sum:    0               
+sum:    0
 temp:   0
 lpcnt:  0
 psum:   asum:
 str1:   "PLEASE ENTER AN INTEGER BETWEEN 1 AND 32767"
 str2:   "THE SUM OF THESE TWO INTEGERS IS:"
 str3:   "OVERFLOW, NO SUM POSSIBLE"
-asum:   0               
+asum:   0
         jneg xbsywt:
-        retn   
-rbsywt: lodd 4093       
-        subd mask:      
+        retn
+rbsywt: lodd 4093
+        subd mask:
         jneg rbsywt:
         retn
-on:     8               
+on:     8
 mask:   10
 nl:     10
 cr:     13
@@ -180,11 +180,11 @@ numptr: binum1:
 binum1: 0
 binum2: 0
 numcnt: 1
-sum:    0               
+sum:    0
 temp:   0
 lpcnt:  0
 psum:   asum:
 str1:   "PLEASE ENTER AN INTEGER BETWEEN 1 AND 32767"
 str2:   "THE SUM OF THESE TWO INTEGERS IS:"
 str3:   "OVERFLOW, NO SUM POSSIBLE"
-asum:   0               
+asum:   0
