@@ -1,0 +1,11 @@
+Assignment 6 completed by John Falvey (John_Falvey@student.uml.edu) on 2021-12-06
+
+I have completed 100% of the asignment
+
+how to run:
+
+$ make run
+
+how to get main object
+
+$ make addints.obj
