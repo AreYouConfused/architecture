@@ -1,0 +1,65 @@
+clang -g -O3 -o a7 a7.c || gcc -g -O3 -o a7 a7.c
+./a7
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:		386075
+PARENT PROC:  Process parent ID is:	386070
+PARENT PROC:  Real UID is:		1000
+PARENT PROC:  Real GID is:		1000
+PARENT PROC:  Effective UID is:		1000
+PARENT PROC:  Effective GID is:		1000
+PARENT PROC:  Process priority is:	0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:		386075
+PARENT PROC:  Process parent ID is:	386070
+PARENT PROC:  Real UID is:		1000
+PARENT PROC:  Real GID is:		1000
+PARENT PROC:  Effective UID is:		1000
+PARENT PROC:  Effective GID is:		1000
+PARENT PROC:  Process priority is:	0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+CHILD PROC: parent's msg is Hey kid, I'm your parent and my PID 386075
+
+CHILD PROC: Process parent ID now is:   386075
+CHILD PROC: ### Goodbye ###
+
+************************************
+./a7
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:		386170
+PARENT PROC:  Process parent ID is:	386169
+PARENT PROC:  Real UID is:		1000
+PARENT PROC:  Real GID is:		1000
+PARENT PROC:  Effective UID is:		1000
+PARENT PROC:  Effective GID is:		1000
+PARENT PROC:  Process priority is:	0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:		386170
+PARENT PROC:  Process parent ID is:	386169
+PARENT PROC:  Real UID is:		1000
+PARENT PROC:  Real GID is:		1000
+PARENT PROC:  Effective UID is:		1000
+PARENT PROC:  Effective GID is:		1000
+PARENT PROC:  Process priority is:	0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+CHILD PROC: parent's msg is Hey kid, I'm your parent and my PID 386170
+
+CHILD PROC: Process parent ID now is:   1
+CHILD PROC: ### Goodbye ###
