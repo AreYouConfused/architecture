@@ -57,6 +57,18 @@ and do a normal termination\n");
 				printf("CHILD PROC: parent's msg is %s\n", msg_buf);
 				printf("CHILD PROC: Process parent ID now is:   %d\n",
                                                             getppid());
+        printf("\nThis is the child process report:\n");
+        priority = getpriority(PRIO_PROCESS, 0);
+
+        printf("\nCHILD PROG:  Process ID is:\t\t%d\n\
+CHILD PROC:  Process parent ID is:\t%d\n\
+CHILD PROC:  Real UID is:\t\t%d\n\
+CHILD PROC:  Real GID is:\t\t%d\n\
+CHILD PROC:  Effective UID is:\t\t%d\n\
+CHILD PROC:  Effective GID is:\t\t%d\n\
+CHILD PROC:  Process priority is:\t%d\n\n",
+    getpid(), getppid(), getuid(), geteuid(), getgid(), getegid());
+
 				printf("CHILD PROC: ### Goodbye ###\n");
 				exit(0);
         } // switch and child end
