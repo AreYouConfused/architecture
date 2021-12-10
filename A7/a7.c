@@ -50,7 +50,7 @@ and do a normal termination\n");
                    exit(4);
         default:
 				 write(msg_pipe[1], msg_buf, 100);
-				 break;
+				 exit(0);
 
         case 0:
                 read(msg_pipe[0], msg_buf, 100);
