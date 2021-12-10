@@ -67,7 +67,7 @@ CHILD PROC:  Real GID is:\t\t%d\n\
 CHILD PROC:  Effective UID is:\t\t%d\n\
 CHILD PROC:  Effective GID is:\t\t%d\n\
 CHILD PROC:  Process priority is:\t%d\n\n",
-    getpid(), getppid(), getuid(), geteuid(), getgid(), getegid());
+    getpid(), getppid(), getuid(), geteuid(), getgid(), getegid(), getpriority(PRIO_PROCESS, 0));
 
 				printf("CHILD PROC: ### Goodbye ###\n");
 				exit(0);
